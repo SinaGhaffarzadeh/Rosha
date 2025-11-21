@@ -236,31 +236,98 @@
 
 @media (max-width: 1024px) {
   .mindMapContainer {
-    height: auto;
+    height: 100vh; /* ارتفاع کامل viewport */
+    min-height: 600px; /* حداقل ارتفاع */
   }
 }
 
 @media (max-width: 768px) {
+  .mindMapContainer {
+    height: 100%; /* استفاده از ارتفاع parent */
+    min-height: 500px; /* حداقل ارتفاع برای موبایل */
+    width: 100%;
+  }
+
   .signalNode {
-    width: 480px;
-    height: 480px;
+    width: 300px; /* کاهش قابل توجه اندازه */
+    height: 300px;
   }
   
   .signalImage {
-    width: 480px;
-    height: 480px;
+    width: 300px;
+    height: 300px;
   }
 
   .mainNode {
-    min-width: auto;
-    padding: 1.2rem;
+    min-width: 250px; /* کاهش عرض */
+    padding: 1rem; /* کاهش padding */
+    min-height: 200px; /* کاهش ارتفاع */
   }
 
   .nodeTitle {
-    font-size: 1.1rem;
+    font-size: 1rem; /* کاهش فونت */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .subNode {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .tooltip {
+    min-width: 250px;
+    max-width: 90vw; /* محدود کردن عرض tooltip */
+    padding: 1rem;
+  }
+}
+
+/* برای موبایل‌های کوچکتر */
+@media (max-width: 480px) {
+  .mindMapContainer {
+    min-height: 400px;
+  }
+
+  .signalNode {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .signalImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mainNode {
+    min-width: 200px;
+    padding: 0.75rem;
+    min-height: 150px;
+  }
+
+  .nodeTitle {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subNode {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .description {
     font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .tooltip {
+    min-width: 200px;
+    max-width: 95vw;
+    padding: 0.75rem;
   }
 }

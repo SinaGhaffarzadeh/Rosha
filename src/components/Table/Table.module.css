@@ -341,7 +341,7 @@
 
 .fullscreenTableContainer {
   padding: 0.5rem;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: auto; /* تغییر از hidden به auto برای scroll افقی */
   overflow-y: scroll;
   flex: 1;
   min-height: 0;
@@ -389,7 +389,7 @@
 
 .fullscreenMindMapContainer {
   padding: 0;
-  overflow: hidden;
+  overflow: auto; /* تغییر از hidden به auto */
   flex: 1;
   min-height: 0;
   width: 100%;
@@ -420,12 +420,22 @@
 /* برای نمایش بهتر در موبایل */
 @media (max-width: 768px) {
   .table {
-    font-size: 0.75rem;
+    font-size: 0.65rem; /* کوچکتر کردن فونت */
+    table-layout: auto; /* تغییر از fixed به auto */
+    min-width: 800px; /* حداقل عرض برای scroll افقی */
   }
   
-  .table th,
+  .table th {
+    font-size: 0.7rem;
+    white-space: normal; /* تغییر از nowrap به normal */
+    padding: 0.4rem 0.3rem;
+    line-height: 1.2;
+  }
+  
   .table td {
-    padding: 0.5rem 0.4rem;
+    padding: 0.4rem 0.3rem;
+    font-size: 0.65rem;
+    line-height: 1.3;
   }
 
   .fullscreenOverlay {
@@ -438,14 +448,97 @@
   }
 
   .fullscreenHeader {
-    padding: 1rem;
+    padding: 0.75rem 0.5rem; /* کاهش padding */
+    flex-wrap: wrap; /* برای responsive header */
   }
 
   .fullscreenHeader h2 {
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* کوچکتر کردن عنوان */
+    flex: 1;
+    min-width: 0;
+  }
+
+  .backButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 
   .fullscreenTableContainer {
-    padding: 1rem;
+    padding: 0.5rem;
+    overflow-x: auto; /* اطمینان از scroll افقی */
+    overflow-y: auto;
+  }
+
+  /* تنظیمات ستون‌ها در موبایل */
+  .sectionColumn,
+  .roshaColumn,
+  .featuresColumn,
+  .aimColumn,
+  .requirementsColumn,
+  .timeColumn,
+  .resultColumn,
+  .futureColumn,
+  .levelColumn {
+    min-width: 80px; /* افزایش حداقل عرض */
+  }
+
+  .fullscreenTableContainer .table {
+    font-size: 0.65rem;
+    table-layout: auto;
+    min-width: 800px;
+  }
+
+  .fullscreenTableContainer .table th,
+  .fullscreenTableContainer .table td {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible; /* تغییر از hidden */
+    text-overflow: clip; /* تغییر از ellipsis */
+  }
+
+  .fullscreenMindMapContainer {
+    overflow: auto; /* اطمینان از scroll */
+    height: calc(100vh - 60px); /* ارتفاع مشخص برای ReactFlow */
+    min-height: 500px; /* حداقل ارتفاع */
+  }
+}
+
+/* برای موبایل‌های کوچکتر */
+@media (max-width: 480px) {
+  .table {
+    font-size: 0.6rem;
+    min-width: 900px; /* عرض بیشتر برای scroll */
+  }
+
+  .table th {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.2rem;
+  }
+
+  .table td {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.2rem;
+  }
+
+  .fullscreenHeader {
+    padding: 0.5rem;
+  }
+
+  .fullscreenHeader h2 {
+    font-size: 0.8rem;
+  }
+
+  .backButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .fullscreenTableContainer {
+    padding: 0.25rem;
+  }
+
+  .fullscreenMindMapContainer {
+    height: calc(100vh - 50px);
+    min-height: 400px;
   }
 }

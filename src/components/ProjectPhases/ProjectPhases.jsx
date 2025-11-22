@@ -10,8 +10,8 @@ const ProjectPhases = () => {
   const phases = [
     {
       id: 1,
-      title: 'فاز 1: طراحی و معماری سیستم',
-      description: 'در این فاز، معماری کلی سیستم طراحی و تعریف می‌شود.',
+      title: 'طراحی و معماری سیستم',
+      description: 'طراحی و تعریف معماری کلی سیستم',
       tasks: [
         { name: 'تعریف معماری کلی سیستم', progress: 100 },
         { name: 'طراحی ساختار پایگاه داده', progress: 10 },
@@ -25,19 +25,21 @@ const ProjectPhases = () => {
     },
     {
       id: 2,
-      title: 'فاز 2: Signal Analysis & Quality Metrics',
+      title: 'Signal Analysis & Quality Metrics',
       description: 'تحلیل ویژگی‌های سیگنال برای کنترل کیفیت و گزارش‌دهی.',
       tasks: [
         { name: 'قدرت سیگنال صوتی به نویز موجود در محیط', progress: 90 },
-        { name: 'سطوح انرژی گفتار و نویز', progress: 90 }
+        { name: 'سطوح انرژی گفتار و نویز', progress: 90 },
+        { name: 'طراحی ساختار پایگاه داده', progress: 10 },
+        { name: 'طراحی API ها و رابط‌های ارتباطی', progress: 100 }
       ],
       duration: 'تقریبا 3 هفته',
       progress: null // محاسبه می‌شود از میانگین tasks
     },
     {
       id: 3,
-      title: 'فاز 3: Speech Intelligence Engine (SIE)',
-      description: 'پیاده‌سازی موتور تبدیل صدا به متن و پردازش سیگنال.',
+      title: 'Speech Intelligence Engine (SIE)',
+      description: 'موتور تبدیل صدا به متن و پردازش سیگنال.',
       tasks: [
         { name: 'Audio Input & Signal Preparation', progress: 100 },
         { name: 'Audio Enhancement & Noise Reduction', progress: 60 },
@@ -50,8 +52,8 @@ const ProjectPhases = () => {
     },
     {
       id: 4,
-      title: 'فاز 4: Conversation Intelligence Engine (CIE)',
-      description: 'پیاده‌سازی موتور تحلیل هوشمند مکالمات.',
+      title: 'Conversation Intelligence Engine (CIE)',
+      description: 'موتور تحلیل هوشمند مکالمات.',
       tasks: [
         { name: 'Text Enhancement and Separating', progress: 80 },
         { name: 'Semantic Analysis & Content Extraction', progress: 70 },
@@ -63,7 +65,7 @@ const ProjectPhases = () => {
     },
     {
       id: 5,
-      title: 'فاز 5: IKBS',
+      title: 'IKBS',
       description: 'بررسی دانش پروژه و استخراج اطلاعات حیاتی',
       tasks: [
         'در آینده'
@@ -73,7 +75,7 @@ const ProjectPhases = () => {
     },
     {
       id: 6,
-      title: 'فاز 6: یکپارچه‌سازی و تست',
+      title: 'یکپارچه‌سازی و تست',
       description: 'یکپارچه‌سازی تمام بخش‌ها و انجام تست‌های جامع.',
       tasks: [
         'یکپارچه‌سازی تمام موتورها',
@@ -85,7 +87,7 @@ const ProjectPhases = () => {
     },
     {
       id: 7,
-      title: 'فاز 7: استقرار و راه‌اندازی',
+      title: 'استقرار و راه‌اندازی',
       description: 'استقرار سیستم در محیط production و راه‌اندازی.',
       tasks: [
         'آماده‌سازی محیط production',

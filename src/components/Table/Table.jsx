@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useApp } from '../../context/AppContext';
 import MindMap from '../MindMap/MindMap';
+import ProjectPhases from '../ProjectPhases/ProjectPhases';
 import styles from './Table.module.css';
 
 // استخراج داده‌ها از ساختار فعلی
@@ -139,9 +140,9 @@ const extractTableData = () => {
     },
     {
       id: 'integrating-kpi',
-      title: 'Integrating KPI',
-      rosha: 'Integrating KPI',
-      sectionGroup: 'Integrating KPI',
+      title: 'IKBS',
+      rosha: 'Checking project knowledge',
+      sectionGroup: 'IKBS',
       description: '',
       features: [],
       requirements: '',
@@ -283,6 +284,7 @@ const Table = () => {
   return (
     <>
       <div className={styles.tableContainer}>
+        <ProjectPhases />
         <button 
           className={styles.fullscreenButton}
           onClick={toggleFullscreen}

@@ -32,6 +32,11 @@ const SECTIONS = [
       { id: 'cie-agent-behavior', title: 'Agent Behavior & Quality Evaluation' },
       { id: 'cie-customer-emotion', title: 'Customer Emotion & Sentiment Understanding' }
     ]
+  },
+  {
+    id: 'ikbs',
+    title: 'Checking project knowledge (IKBS)',
+    subsections: []
   }
 ];
 
@@ -67,13 +72,14 @@ const SectionList = () => {
             sub => sub.id === selectedSection
           );
           const isSectionActive = selectedSection === section.id || isSubsectionSelected;
+          const isMainSectionSelected = selectedSection === section.id;
           const isExpanded = expandedSections.has(section.id);
           
           return (
           <div key={section.id} className={styles.sectionGroup}>
             <button
               className={`${styles.sectionItem} ${styles.mainSection} ${
-                isSectionActive ? styles.active : ''
+                isMainSectionSelected ? styles.active : ''
               }`}
               onClick={() => handleSectionClick(section.id)}
               aria-label={`Open ${section.title} section`}

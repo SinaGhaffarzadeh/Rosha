@@ -76,6 +76,15 @@
   flex: 0;
 }
 
+.ikbs {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.95) 0%, rgba(123, 31, 162, 0.95) 100%);
+  min-height: auto;
+}
+
+.ikbs .subNodes {
+  flex: 0;
+}
+
 .nodeTitle {
   color: #fff;
   font-family: 'Georgia', 'Times New Roman', serif;
@@ -214,6 +223,17 @@
 .tooltipSubItemGreen {
   color: #4caf50;
   font-weight: 500;
+}
+
+.tooltipMessage {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-style: italic;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 
 @keyframes fadeIn {

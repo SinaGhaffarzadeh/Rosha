@@ -51,7 +51,7 @@ const SECTIONS_DATA = {
         <h3>- مدیریت ورودی</h3>
         <ul>
           <li>پشتیبانی از انواع فرمت‌ها</li>
-          <li>دریافت فایل آپلودی و <span style={{ color: 'red' }}>استریم برخط (در آینده)</span></li>
+          <li>دریافت فایل آپلودی و <span style={{ color: 'green' }}>استریم برخط (در آینده)</span></li>
         </ul>
 
         <h3>- آماده سازی سیگنال</h3>
@@ -76,13 +76,13 @@ const SECTIONS_DATA = {
         <h3>- فیلتراسیون سیگنال</h3>
         <ul>
           <li>فیلتر میانگذر</li>
-          <li><span style={{ color: 'red' }}>فیلتر تطبیقی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>فیلتر تطبیقی (در آینده)</span></li>
         </ul>
 
         <h3>- حذف نویز سیگنال</h3>
         <ul>
           <li>استفاده از خصوصیات 3 نوع denoiser برای حذف نویز</li>
-          <li><span style={{ color: 'red' }}>توسعه مدل یادگیری غیرنظارتی برای کاهش نویز (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>توسعه مدل یادگیری غیرنظارتی برای کاهش نویز (در آینده)</span></li>
         </ul>
       </div>
     ),
@@ -96,9 +96,9 @@ const SECTIONS_DATA = {
         
         <h3>- تشخیص بخش های گفتار و غیر گفتار</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>تقسیم‌بندی بخش های گفتار (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>تشخیص بخش های سکوت (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>علامت‌گذاری زمانی برای بخش‌های گفتار و سکوت (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تقسیم‌بندی بخش های گفتار (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تشخیص بخش های سکوت (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>علامت‌گذاری زمانی برای بخش‌های گفتار و سکوت (در آینده)</span></li>
         </ul>
       </div>
     ),
@@ -110,16 +110,16 @@ const SECTIONS_DATA = {
       <div>
         <p>این بخش شامل مراحل تشخیص و تفکیک گویندگان در مکالمه است. از شناسایی نقش‌های مختلف (کارشناس و مشتری) تا استفاده از تکنیک‌های پیشرفته بردارسازی صوتی برای تطابق با گویندگان مکالمات قبلی، تمامی مراحل لازم برای تفکیک دقیق گویندگان انجام می‌شود.</p>
         
-        <h3><span style={{ color: 'red' }}>- شناسایی گوینده (در آینده)</span></h3>
+        <h3><span style={{ color: 'green' }}>- شناسایی گوینده (در آینده)</span></h3>
         <ul>
-          <li><span style={{ color: 'red' }}>تفکیک کارشناس / مشتری</span></li>
-          <li><span style={{ color: 'red' }}>تشخیص تعداد گوینده</span></li>
+          <li><span style={{ color: 'green' }}>تفکیک کارشناس / مشتری</span></li>
+          <li><span style={{ color: 'green' }}>تشخیص تعداد گوینده</span></li>
         </ul>
 
-        <h3><span style={{ color: 'red' }}>- استفاده از فضای برداری صوتی برای تفکیک گویندگان (در آینده)</span></h3>
+        <h3><span style={{ color: 'green' }}>- استفاده از فضای برداری صوتی برای تفکیک گویندگان (در آینده)</span></h3>
         <ul>
-          <li><span style={{ color: 'red' }}>بردارسازی هویت صوتی</span></li>
-          <li><span style={{ color: 'red' }}>تطابق با گویندگان مکالمات قبلی</span></li>
+          <li><span style={{ color: 'green' }}>بردارسازی هویت صوتی</span></li>
+          <li><span style={{ color: 'green' }}>تطابق با گویندگان مکالمات قبلی</span></li>
         </ul>
       </div>
     ),
@@ -135,7 +135,7 @@ const SECTIONS_DATA = {
         <ul>
           <li>قدرت سیگنال صوتی به نویز موجود در محیط</li>
           <li>سطوح انرژی گفتار و نویز</li>
-          <li><span style={{ color: 'red' }}>انعکاس موجود در سیگنال صوتی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>انعکاس موجود در سیگنال صوتی (در آینده)</span></li>
         </ul>
         </div>
     ),
@@ -160,9 +160,9 @@ const SECTIONS_DATA = {
         <ul>
           <li>اطلاعات کلیدی را به صورت خودکار استخراج می‌کند</li>
           <li>رفتار کارشناس و کیفیت پاسخ‌گویی را از طریق متن تحلیل می‌کند</li>
-          <li><span style={{ color: 'red' }}>از متن مکالمه گزارش، خلاصه، هشدار و طبقه‌بندی تولید می‌کند. (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>کلمات کلیدی حساس یا جملات خارج از استاندارد را شناسایی می‌کند. (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>دلایل تماس، شکایات، مشکلات و درخواست‌ها را شناسایی می‌کند. (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>از متن مکالمه گزارش، خلاصه، هشدار و طبقه‌بندی تولید می‌کند. (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>کلمات کلیدی حساس یا جملات خارج از استاندارد را شناسایی می‌کند. (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>دلایل تماس، شکایات، مشکلات و درخواست‌ها را شناسایی می‌کند. (در آینده)</span></li>
         </ul>
 
         <h3>توضیحات تکمیلی</h3>
@@ -186,14 +186,14 @@ const SECTIONS_DATA = {
           <li>بازسازی معنی واقعی جملات ناقص</li>
           <li>حذف نویزهای متنی</li>
           <li>تشخیص عبارات نامفهوم یا جایگزین مناسب</li>
-          <li><span style={{ color: 'red' }}>اتوماسیون عملیات فوق با استفاده مدل های آمار پیشرفته (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>اتوماسیون عملیات فوق با استفاده مدل های آمار پیشرفته (در آینده)</span></li>
         </ul>
 
         <h3>- تفکیک گویندگان از متن</h3>
         <ul>
           <li>تفکیک نقش‌ها: کارشناس / مشتری</li>
-          <li><span style={{ color: 'red' }}>هماهنگ‌سازی با تایم‌لاین (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>تشخیص Overlap (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>هماهنگ‌سازی با تایم‌لاین (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تشخیص Overlap (در آینده)</span></li>
         </ul>
         </div>
     ),
@@ -209,25 +209,25 @@ const SECTIONS_DATA = {
         <ul>
           <li>کلمات کلیدی مکالمه</li>
           <li>عبارات مهم مرتبط با محصول/سرویس</li>
-          <li><span style={{ color: 'red' }}>کلمات و جملات ممنوعه (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>کلمات ضروری (اسکریپت سازمان) (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>رعایت احوال‌پرسی استاندارد (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>رعایت قوانین سازمان (Privacy, Legal) (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>کلمات و جملات ممنوعه (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>کلمات ضروری (اسکریپت سازمان) (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>رعایت احوال‌پرسی استاندارد (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>رعایت قوانین سازمان (Privacy, Legal) (در آینده)</span></li>
         </ul>
 
         <h3>- تشخیص مشکل و تمایل مشتری</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>دلیل تماس (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>شکایت، درخواست، پیشنهاد (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>اولویت مشکل (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>پیش‌بینی نیاز بعدی مشتری (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>دلیل تماس (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>شکایت، درخواست، پیشنهاد (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>اولویت مشکل (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>پیش‌بینی نیاز بعدی مشتری (در آینده)</span></li>
         </ul>
 
         <h3>- استخراج اطلاعات مشتری</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>اطلاعات هویتی (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>نیاز، درخواست، مشکل اصلی (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>تاریخ، شماره تماس، شناسه‌ها (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>اطلاعات هویتی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>نیاز، درخواست، مشکل اصلی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تاریخ، شماره تماس، شناسه‌ها (در آینده)</span></li>
         </ul>
 
         </div>
@@ -243,17 +243,17 @@ const SECTIONS_DATA = {
         <h3>- لحن و احساس کارشناس</h3>
         <ul>
           <li>تشخیص لحن از متن و امتیاز دهی 0 تا 10</li>
-          <li><span style={{ color: 'red' }}>تشخیص لحن پیشرفته با استفاده از صدای کارشناس (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>استرس یا خستگی کارشناس (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>ثبات لحن در طول مکالمه (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تشخیص لحن پیشرفته با استفاده از صدای کارشناس (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>استرس یا خستگی کارشناس (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>ثبات لحن در طول مکالمه (در آینده)</span></li>
         </ul>
 
         <h3>- آنالیز کیفیت پاسخ کارشناس</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>پاسخ صحیح و مرتبط (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>سرعت پاسخ‌دهی (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>جلوگیری از گمراه‌سازی مشتری (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>میزان کمک واقعی به مشتری (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>پاسخ صحیح و مرتبط (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>سرعت پاسخ‌دهی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>جلوگیری از گمراه‌سازی مشتری (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>میزان کمک واقعی به مشتری (در آینده)</span></li>
         </ul>
       </div>
     ),
@@ -267,14 +267,25 @@ const SECTIONS_DATA = {
         
         <h3>- شناسایی احساسات مشتری</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>رضایت / نارضایتی / بی‌تفاوتی (در آینده)</span></li>
-          <li><span style={{ color: 'red' }}>شدت احساس (Low, Mid, High) (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>رضایت / نارضایتی / بی‌تفاوتی (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>شدت احساس (Low, Mid, High) (در آینده)</span></li>
         </ul>
 
         <h3>- استخراج روند تغییرات احساسات مشتری حین صحبت</h3>
         <ul>
-          <li><span style={{ color: 'red' }}>تغییر احساس در طول مکالمه (در آینده)</span></li>
+          <li><span style={{ color: 'green' }}>تغییر احساس در طول مکالمه (در آینده)</span></li>
         </ul>
+      </div>
+    ),
+  },
+  ikbs: {
+    title: 'Checking project knowledge (IKBS)',
+    description: 'بررسی دانش پروژه و استخراج اطلاعات حیاتی',
+    content: (
+      <div>
+        <p>این بخش از سیستم Rosha از دانش پروژه برای کنترل و استخراج اطلاعات حیاتی استفاده می‌کند. با بهره‌گیری از پایگاه دانش پروژه، سیستم قادر است اطلاعات مهم و مرتبط را شناسایی کرده و در فرآیند تحلیل مکالمات به کار گیرد. این رویکرد به سیستم کمک می‌کند تا با استفاده از دانش موجود در پروژه، تحلیل‌های دقیق‌تر و کاربردی‌تری ارائه دهد.</p>
+        
+        <p>اطلاعات بیشتر در مورد جزئیات عملکرد و قابلیت‌های این بخش در آینده اضافه خواهد شد.</p>
       </div>
     ),
   },

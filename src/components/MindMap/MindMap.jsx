@@ -32,6 +32,10 @@ const MainNode = ({ data }) => {
   if (data.serviceDetails && data.serviceDetails.length > 0) {
     tooltipContent.push({ type: 'serviceDetails', items: data.serviceDetails });
   }
+  
+  if (data.tooltipMessage) {
+    tooltipContent.push({ type: 'tooltipMessage', content: data.tooltipMessage });
+  }
 
   return (
     <div 
@@ -95,6 +99,9 @@ const MainNode = ({ data }) => {
                   ))}
                 </div>
               )}
+              {item.type === 'tooltipMessage' && (
+                <div className={styles.tooltipMessage}>{item.content}</div>
+              )}
             </div>
           ))}
         </div>
@@ -112,14 +119,14 @@ const nodes = [
   {
     id: 'signal',
     type: 'signal',
-    position: { x: -100, y: 0 },
+    position: { x: -50, y: 150 },
     data: {},
     style: { width: 640, height: 640 },
   },
   {
     id: 'pre-processing',
     type: 'main',
-    position: { x: -600, y: 300 },
+    position: { x: -400, y: 100 },
     data: {
       label: 'Pre-Processing',
       type: 'preProcessing',
@@ -135,7 +142,7 @@ const nodes = [
   {
     id: 'analyzing-audio',
     type: 'main',
-    position: { x: 400, y: 300 },
+    position: { x: 300, y: 100 },
     data: {
       label: 'Analyzing Audio',
       type: 'analyzingAudio',
@@ -149,7 +156,7 @@ const nodes = [
   {
     id: 'voice-to-text-engine',
     type: 'main',
-    position: { x: 0, y: 300 },
+    position: { x: 0, y: 100 },
     data: {
       label: 'Voice To Text Engine',
       type: 'voiceToTextEngine',
@@ -162,7 +169,7 @@ const nodes = [
   {
     id: 'processing-text',
     type: 'main',
-    position: { x: 0, y: 700 },
+    position: { x: 0, y: 400 },
     data: {
       label: 'Processing Text',
       type: 'processingText',
@@ -184,7 +191,7 @@ const nodes = [
   {
     id: 'lm-analysis',
     type: 'main',
-    position: { x: 0, y: 1100 },
+    position: { x: 0, y: 700 },
     data: {
       label: 'Language Model Based Analysis',
       type: 'lmAnalysis',
@@ -194,6 +201,17 @@ const nodes = [
         'Agent Behavior & Quality Evaluation',
         'Customer Emotion & Sentiment Understanding',
       ],
+    },
+  },
+  {
+    id: 'ikbs',
+    type: 'main',
+    position: { x: 0, y: 1000 },
+    data: {
+      label: 'Checking project knowledge (IKBS)',
+      type: 'ikbs',
+      description: 'بررسی دانش پروژه و استخراج اطلاعات حیاتی',
+      tooltipMessage: 'در آینده',
     },
   },
 ];
@@ -218,6 +236,7 @@ const initialEdges = [
   { id: 'pre-voice', source: 'pre-processing', target: 'voice-to-text-engine', type: 'smoothstep', animated: true },
   { id: 'voice-text', source: 'voice-to-text-engine', target: 'processing-text', type: 'smoothstep', animated: true },
   { id: 'text-lm', source: 'processing-text', target: 'lm-analysis', type: 'smoothstep', animated: true },
+  { id: 'lm-ikbs', source: 'lm-analysis', target: 'ikbs', type: 'smoothstep', animated: true },
 ];
 
 const MindMap = () => {

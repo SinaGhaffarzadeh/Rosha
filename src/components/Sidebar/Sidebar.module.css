@@ -101,6 +101,14 @@
   margin: 0;
 }
 
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

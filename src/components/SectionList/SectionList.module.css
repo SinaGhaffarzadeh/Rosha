@@ -113,6 +113,8 @@
 
 .mainSection {
   font-weight: 500;
+  color: rgba(134, 239, 172, 0.45);
+  text-decoration-color: rgba(134, 239, 172, 0.3);
 }
 
 .subsections {
@@ -140,9 +142,19 @@
   transform: translateX(-5px);
 }
 
+.mainSection:hover {
+  color: rgba(134, 239, 172, 0.65);
+  text-decoration-color: rgba(134, 239, 172, 0.45);
+}
+
 .sectionItem.active {
   color: #fff;
   text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.mainSection.active {
+  color: rgba(134, 239, 172, 0.45);
+  text-decoration-color: rgba(134, 239, 172, 0.3);
 }
 
 .socialIcons {

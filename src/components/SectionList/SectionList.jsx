@@ -9,6 +9,11 @@ const SECTIONS = [
     subsections: []
   },
   {
+    id: 'signal-analysis',
+    title: 'Signal Analysis & Quality Metrics',
+    subsections: []
+  },
+  {
     id: 'sie',
     title: 'Speech Intelligence Engine (SIE)',
     subsections: [
@@ -17,11 +22,6 @@ const SECTIONS = [
       { id: 'sie-vad', title: 'Speech & Silence Detection (VAD)' },
       { id: 'sie-diarization', title: 'Speaker Diarization' }
     ]
-  },
-  {
-    id: 'signal-analysis',
-    title: 'Signal Analysis & Quality Metrics',
-    subsections: []
   },
   {
     id: 'cie',

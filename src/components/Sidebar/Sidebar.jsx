@@ -1,19 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useApp } from '../../context/AppContext';
 import styles from './Sidebar.module.css';
 import Table from '../Table/Table';
+import roshaPipelineImage from '../../assets/Rohsa_Pip.png';
 
-const SECTIONS_DATA = {
-  overview: {
-    title: 'System Overview',
-    description: 'ساختار سیستم Rosha',
-    content: (
-      <div>
-        <p>سیستم Rosha یک پلتفرم پیشرفته برای تحلیل هوشمند مکالمات است که از دو موتور اصلی Speech Intelligence Engine (SIE) و Conversation Intelligence Engine (CIE) تشکیل شده است. این سیستم مکالمات صوتی را به داده‌های قابل تحلیل تبدیل کرده و اطلاعات ارزشمندی برای بهبود کیفیت خدمات و تصمیم‌گیری استخراج می‌کند. در بخش زیر می‌توانید ساختار کامل سیستم و ارتباط بین اجزای مختلف آن را مشاهده کنید.</p>
-        <Table />
-      </div>
-    ),
-  },
+const Sidebar = () => {
+  const { selectedSection, closeDrawer } = useApp();
+  const [isPipelineImageOpen, setIsPipelineImageOpen] = useState(false);
+
+  const togglePipelineImage = () => {
+    const newState = !isPipelineImageOpen;
+    setIsPipelineImageOpen(newState);
+    if (newState) {
+      closeDrawer();
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  };
+
+  useEffect(() => {
+    if (isPipelineImageOpen) {
+      closeDrawer();
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isPipelineImageOpen, closeDrawer]);
+
+  const SECTIONS_DATA = {
+    overview: {
+      title: 'System Overview',
+      description: 'ساختار سیستم Rosha',
+      content: (
+        <div>
+          <p>سیستم Rosha یک پلتفرم پیشرفته برای تحلیل هوشمند مکالمات است که از دو موتور اصلی Speech Intelligence Engine (SIE) و Conversation Intelligence Engine (CIE) تشکیل شده است. این سیستم مکالمات صوتی را به داده‌های قابل تحلیل تبدیل کرده و اطلاعات ارزشمندی برای بهبود کیفیت خدمات و تصمیم‌گیری استخراج می‌کند. در بخش زیر می‌توانید ساختار کامل سیستم و ارتباط بین اجزای مختلف آن را مشاهده کنید.</p>
+          <div className={styles.pipelineButtonContainer}>
+            <button 
+              className={styles.pipelineButton}
+              onClick={togglePipelineImage}
+              aria-label="Rosha Pipeline"
+            >
+              Rosha Pipeline
+            </button>
+          </div>
+          <Table />
+        </div>
+      ),
+    },
   sie: {
     title: 'Speech Intelligence Engine (SIE)',
     description: 'موتور هوشمند تبدیل صدا به داده قابل استفاده',
@@ -288,25 +327,50 @@ const SECTIONS_DATA = {
         <p>اطلاعات بیشتر در مورد جزئیات عملکرد و قابلیت‌های این بخش در آینده اضافه خواهد شد.</p>
       </div>
     ),
-  },
-};
+    },
+  };
 
-const Sidebar = () => {
-  const { selectedSection } = useApp();
   const sectionData = selectedSection && SECTIONS_DATA[selectedSection] 
     ? SECTIONS_DATA[selectedSection] 
     : SECTIONS_DATA.overview;
 
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.sidebarHeader}>
-        <h2 className={styles.title}>{sectionData.title}</h2>
-        <p className={styles.description}>{sectionData.description}</p>
+    <>
+      <div className={styles.sidebar}>
+        <div className={styles.sidebarHeader}>
+          <h2 className={styles.title}>{sectionData.title}</h2>
+          <p className={styles.description}>{sectionData.description}</p>
+        </div>
+        <div className={styles.sidebarContent}>
+          {sectionData.content}
+        </div>
       </div>
-      <div className={styles.sidebarContent}>
-        {sectionData.content}
-      </div>
-    </div>
+
+      {isPipelineImageOpen && createPortal(
+        <div className={styles.fullscreenOverlay} onClick={togglePipelineImage}>
+          <div className={styles.fullscreenContent} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.fullscreenHeader}>
+              <button 
+                className={styles.backButton}
+                onClick={togglePipelineImage}
+                aria-label="بازگشت"
+              >
+                ← بازگشت
+              </button>
+              <h2>Rosha Pipeline</h2>
+            </div>
+            <div className={styles.fullscreenImageContainer}>
+              <img 
+                src={roshaPipelineImage} 
+                alt="Rosha Pipeline" 
+                className={styles.pipelineImage}
+              />
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
   );
 };
 
